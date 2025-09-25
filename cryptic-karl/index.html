@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>obscura // cryptic</title>
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🗝️</text></svg>">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="noise"></div>
+    <main class="frame">
+      <header class="topbar">
+        <div class="brand">obscura<span class="muted">//</span></div>
+        <div class="cursor" aria-hidden="true"></div>
+      </header>
+
+      <section class="puzzle" aria-live="polite">
+        <h1 class="sr-only">A small riddle</h1>
+        <p class="riddle">I speak without a mouth, and hear without ears. I have no body, yet the wind gives me life. What am I?</p>
+        <form id="riddle-form" autocomplete="off">
+          <input id="answer" name="answer" class="input" placeholder="type the answer" inputmode="text" />
+          <button class="button" type="submit" aria-label="Submit answer">submit</button>
+        </form>
+        <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="reveal" class="reveal" hidden>
+        <div class="glyph" aria-hidden="true">
+          <span class="glitch" data-text="K">K</span>
+        </div>
+        <p class="instruction">Message Karl this letter</p>
+      </section>
+
+      <footer class="footer">
+        <span class="hint">hint: lowercase is fine</span>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+  </html>
+
